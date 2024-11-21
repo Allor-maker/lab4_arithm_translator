@@ -1,3 +1,5 @@
 add_library(parser_lib STATIC parser.h parser.cpp)
 
+target_link_libraries(parser_lib PUBLIC interface_lib)
+target_link_libraries(parser_lib PUBLIC stack_lib)
 target_include_directories(parser_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
